@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Models\Categoria;
+use Illuminate\Http\Request;
+use App\Http\Resources\V1\CategoriaResource;
 
 class CategoriaController extends Controller
 {
@@ -12,16 +14,9 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        //$categoria = Categoria::all();
-        return 'soy una categoria';
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+        //Por qué no funciona el resource categoria: dice que el codigo no está...
+        $categorias = Categoria::all();
+        return $categorias;
     }
 
     /**
@@ -29,21 +24,13 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        Categoria::created($request->all());
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function show(Categoria $categoria)
     {
         //
     }
@@ -53,7 +40,7 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, Categoria $categoria)
     {
-        $categoria->update($request->all);
+        //
     }
 
     /**
@@ -61,6 +48,6 @@ class CategoriaController extends Controller
      */
     public function destroy(Categoria $categoria)
     {
-        $categoria->delete;
+        //
     }
 }

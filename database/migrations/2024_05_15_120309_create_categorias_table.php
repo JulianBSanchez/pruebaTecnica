@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('categorias', function (Blueprint $table) {
             $table->id();
-            //Establecer las relaciones
-            $table->string('categoria_codigo');
-            $table->string('categoria_nommbre');
-            $table->string('categoria_descripcion');
+
+            $table->string('codigo');
+            $table->string('nombre');
+            $table->string('descripcion');
+            $table->json('subcategorias');
            
             $table->timestamps();
         });

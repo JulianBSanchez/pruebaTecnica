@@ -11,14 +11,18 @@ class Categoria extends Model
 
     protected $fillable = [
         'codigo',
-        'nommbre',
+        'nombre',
         'descripcion',
         'producto',
-        'categoria'
+        'subcategorias'
     ];
 
     public function productos()
     {
         return $this->hasmany(Producto::class);
     }
+
+    protected $casts =[
+        'subcategorias' => 'array'
+    ];
 }
