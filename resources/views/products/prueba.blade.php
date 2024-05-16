@@ -8,5 +8,10 @@
 </head>
 <body>
     <h1>Hello World</h1>
+    @auth
+        <a href="{{ route('dashboard')}}">Dashboard</a>
+    @else
+    <a href="{{ route('login')}}">Login</a>
+    @endauth
 </body>
 </html>
