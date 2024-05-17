@@ -16,11 +16,17 @@ class Producto extends Model
         'descripcion',
         'src',
         'categoria',
+        'pedido'
     ];
 
     public function categoria()
     {
         return $this->belongsTo(Categoria::class);
+    }
+
+    public function pedido()
+    {
+        return $this->belongsTo(Pedido::class);
     }
 
 }
