@@ -14,7 +14,7 @@ class Categoria extends Model
         'nombre',
         'descripcion',
         'producto',
-        'subcategorias'
+        'parent_id'
     ];
 
     public function productos()
@@ -22,7 +22,13 @@ class Categoria extends Model
         return $this->hasmany(Producto::class);
     }
 
-    protected $casts =[
-        'subcategorias' => 'array'
-    ];
-}
+    public function parent()
+    {
+        return $this->belongsTo('Categoria', 'parent_id');
+    }
+
+    public function children(){
+        return $this->hasMany('Categoria'. 'parent_id');
+    }
+
+

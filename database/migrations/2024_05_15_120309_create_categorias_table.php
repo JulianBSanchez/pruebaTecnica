@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('categorias', function (Blueprint $table) {
             $table->id();
-
+            
             $table->string('codigo');
             $table->string('nombre');
             $table->string('descripcion');
             $table->json('subcategorias');
-           
+
+            $table->unsignedBigInteger('parent_id')->nullable();
+            $table-> foreign('parent_id')->references('id')->on('categorias');
+
             $table->timestamps();
         });
     }
