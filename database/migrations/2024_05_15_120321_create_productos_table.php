@@ -20,7 +20,7 @@ return new class extends Migration
             $table-> string('nombre');
             $table-> bigInteger('precio');
             $table-> string('descripcion');
-            $table-> string('foto');
+            $table-> string('src');
             
             $table->timestamps();
         });
