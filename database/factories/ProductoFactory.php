@@ -28,7 +28,6 @@ class ProductoFactory extends Factory
             'precio'       => fake()->numberBetween(1,500),
             'descripcion'  => fake()->paragraph(3),
             'src'          => fake()->imageUrl(),
-            
         ];
     }
 }
