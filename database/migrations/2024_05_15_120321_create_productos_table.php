@@ -23,7 +23,7 @@ return new class extends Migration
             $table-> string('codigo');
             $table-> string('nombre');
             $table-> bigInteger('precio');
-            $table-> string('descripcion');
+            $table-> text('descripcion');
             $table-> string('src');
             
             $table->timestamps();
