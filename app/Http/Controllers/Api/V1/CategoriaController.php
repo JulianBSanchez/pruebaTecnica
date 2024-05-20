@@ -23,14 +23,14 @@ class CategoriaController extends Controller
      */
     public function store(Request $request):JsonResponse
     {
-        $categoria = Categoria::create($request->all);
+        $categoria = Categoria::Create($request->all());
         return response()->json(['success' => true, 'data' => $categoria], 201);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Categoria $categoria)//:JsonResponse
+    public function show(Categoria $categoria):JsonResponse
     {
        return response()->json($categoria, 200);
     }
@@ -48,9 +48,9 @@ class CategoriaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Categoria $categoria):JsonResponse
+    public function destroy($id):JsonResponse
     {
-        Categoria::find($categoria)->delete();
+        Categoria::find($id)->delete();
         return response()->json(['success' => true], 200);
     }
 }

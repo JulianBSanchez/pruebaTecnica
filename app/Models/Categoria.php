@@ -31,4 +31,4 @@ class Categoria extends Model
         return $this->hasMany('Categoria'. 'parent_id');
     }
 
-
+}

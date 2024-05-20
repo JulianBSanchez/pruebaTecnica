@@ -21,10 +21,9 @@ class ProductoController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)//:JsonResponse
+    public function store(Request $request):JsonResponse
     {
-        $productoRequest = $request;
-        $producto = Producto::Create($productoRequest->all());
+        $producto = Producto::Create($request->all());
         return response()->json(['success' => true, 'data' => $producto], 201);
     }
 
