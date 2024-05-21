@@ -12,8 +12,8 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        //$categoria = Categoria::all();
-        return 'soy una categoria';
+        $categoria = Categoria::all();
+        return $categoria;
     }
 
     /**
