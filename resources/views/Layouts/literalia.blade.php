@@ -10,26 +10,28 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.min.js"></script> <!-- Añadido este script -->
 </head>
 <body>
-    <div class="row">
-        <div class="col-sm-10"></div>
-        <div class="col-sm-1"><a href="{{ url('/login') }}">Login</a></div>
-        <div class="col-sm-1">Contact</div>
-    </div>
-    <div class="container p-5 my-5 bg-dark text-white">
-        <h1 class="text-center" style="font-weight: bold;">Literalia</h1>
-        <p class="text-center">Busque, encuentre, disfrute.</p>
-        <h3>La librería de segunda mano por antonomasia.</h3>
-        
-    </div>
-    <div class="container p-5 my-5 border">
+    <div id="app">
         <div class="row">
-            <div class="col-sm-7">
-                @yield('main_content')    
-            </div>
-            <div class="col-sm-5">
-                @yield('secondary_content')
-            </div>
-        </div> 
+            <div class="col-sm-10"></div>
+            <div class="col-sm-1"><a href="{{ url('/login') }}">Login</a></div>
+            <div class="col-sm-1">Contact</div>
+        </div>
+        <div class="container p-5 my-5 bg-dark text-white">
+            <h1 class="text-center" style="font-weight: bold;">Literalia</h1>
+            <p class="text-center">Busque, encuentre, disfrute.</p>
+            <h3>La librería de segunda mano por antonomasia.</h3>
+            
+        </div>
+        <div class="container p-5 my-5 border">
+            <div class="row">
+                <div class="col-sm-7">
+                    @yield('main_content')    
+                </div>
+                <div class="col-sm-5">
+                    @yield('secondary_content')
+                </div>
+            </div> 
+        </div>
     </div>
 </body>
 </html>

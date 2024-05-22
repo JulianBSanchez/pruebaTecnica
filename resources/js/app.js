@@ -14,7 +14,9 @@ const app = createApp({});
 import ExampleComponent from './Components/ExampleComponent.vue';
 app.component('example-component', ExampleComponent);
 
-import MyTable from './Components/MyTable.vue';
-app.component('my-table', MyTable);
+import MyTableCategogories from './Components/MyTableCategories.vue';
+app.component('my-table-categories', MyTableCategogories);
 
+import MyTableProducts from './Components/MyTableProducts.vue';
+app.component ('my-table-productos', MyTableProducts)
 app.mount('#app');
