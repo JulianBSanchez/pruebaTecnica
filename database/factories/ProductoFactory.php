@@ -22,7 +22,7 @@ class ProductoFactory extends Factory
     {
         $categoria =  Categoria::all();
         return [
-            'codigo'       => Str::random(25),
+            'codigo'       => Str::random(6),
             'categoria_id' => fake()->numberBetween(1,4),
             'nombre'       => fake()->name(),
             'precio'       => fake()->numberBetween(1,500),
