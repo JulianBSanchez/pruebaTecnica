@@ -5,6 +5,7 @@
  */
 
 import './bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css"
 import { createApp } from 'vue/dist/vue.esm-bundler.js';
 
 
@@ -18,5 +19,9 @@ import MyTableCategogories from './Components/MyTableCategories.vue';
 app.component('my-table-categories', MyTableCategogories);
 
 import MyTableProducts from './Components/MyTableProducts.vue';
-app.component ('my-table-productos', MyTableProducts)
+app.component ('my-table-productos', MyTableProducts);
+
+import Dropdown from './Components/Dropdown.vue';
+app.component('my-dropdown', Dropdown);
+
 app.mount('#app');

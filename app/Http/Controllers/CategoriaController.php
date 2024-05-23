@@ -21,7 +21,8 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+        $categorias = Categoria::all();
+        return view('Categoria.createCategoria', compact('categorias'));
     }
 
     /**
@@ -29,7 +30,8 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        Categoria::created($request->all());
+       Categoria::Create($request->all());
+       return redirect()->route('home');
     }
 
     /**
@@ -37,7 +39,8 @@ class CategoriaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $categoria = Categoria::Find($id);
+        return view("Categoria.showCategoria", compact('categoria'));
     }
 
     /**
@@ -45,22 +48,26 @@ class CategoriaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $categoria = Categoria::Find($id);
+        return view("categoria.editCategoria", compact('categoria'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Categoria $categoria)
+    public function update(Request $request, $id)
     {
-        $categoria->update($request->all);
+        $categoria = Categoria::find($id);
+        $categoria->update($request->all());
+        return redirect()->route('home');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Categoria $categoria)
+    public function destroy($id)
     {
-        $categoria->delete;
+       Categoria::Find($id)->delete();
+       return redirect()->route('home');
     }
 }
