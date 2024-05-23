@@ -4,26 +4,35 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Producto;
-use App\Models\Categoria;
+use App\Models\Pedido;
 
-class ProductoController extends Controller
+class PedidoController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $productos = Producto::all();
-        return $productos;
+        $pedidos = Pedido::all();
+        return $pedidos;
     }
+    /**
+     * Add books to the list
+     */
+
+     public function addBooks($id, $units){
+        $books=[];
+        
+     }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {   
-        $categorias = Categoria::all();
-        return view('producto.createProduct', compact('categorias'));
+        $pedidos = Pedido::all();
+        return view('Pedido.createOrder', compact('pedidos'));
     }
 
     /**
@@ -31,14 +40,7 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {  
-        $producto = new Producto();
-        $producto->categoria_id = $request->categoria_id;
-        $producto->codigo = $request->codigo;
-        $producto->nombre = $request->nombre;
-        $producto->precio = $request->precio;
-        $producto->descripcion = $request->descripcion;
-        $producto->src = $request->src;
-        $producto->save();
+        Pedido::Create($request->all());
         return redirect()->route('home');
     }
 
@@ -47,8 +49,8 @@ class ProductoController extends Controller
      */
     public function show($id)
     {
-        $producto = Producto::Find($id);
-        return view("Producto.showProduct", compact('producto'));
+        $pedido = Pedido::Find($id);
+        return view("Pedido.showOrder", compact('pedido'));
     }
 
     /**
@@ -56,16 +58,16 @@ class ProductoController extends Controller
      */
     public function edit($id)
     {
-        $producto = Producto::Find($id);
-        return view("Producto.editProduct", compact('producto'));
+        $pedido = Pedido::Find($id);
+        return view("Pedido.editOrder", compact('pedido'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Producto $producto)
+    public function update(Request $request, Producto $pedido)
     {
-        $producto->update($request->all());
+        $pedido->update($request->all());
         return redirect()->route('home');
     }
 
@@ -74,7 +76,7 @@ class ProductoController extends Controller
      */
     public function destroy($id)
     {
-        Producto::find($id)->delete();
+        Pedido::find($id)->delete();
         return redirect()->route('home');
     }
 }
