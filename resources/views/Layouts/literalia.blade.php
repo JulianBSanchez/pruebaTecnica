@@ -24,7 +24,9 @@
                 <div class="col-sm-6">
                     @yield('main_content')    
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-1">   
+                </div>
+                <div class="col-sm-4">
                     @yield('secondary_content')
                 </div>
             </div> 
