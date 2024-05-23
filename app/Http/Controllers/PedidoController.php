@@ -17,15 +17,8 @@ class PedidoController extends Controller
         $pedidos = Pedido::all();
         return $pedidos;
     }
-    /**
-     * Add books to the list
-     */
 
-     public function addBooks($id, $units){
-        $books=[];
         
-     }
-
     /**
      * Show the form for creating a new resource.
      */
