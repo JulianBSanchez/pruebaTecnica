@@ -17,8 +17,7 @@
         <div class="container p-5 my-5 bg-dark text-white">
             <h1 class="text-center" style="font-weight: bold;">Literalia</h1>
             <p class="text-center">Busque, encuentre, disfrute.</p>
-            <h3>La librería de segunda mano por antonomasia.</h3>
-            
+            <h3>La librería de segunda mano por antonomasia.</h3>  
         </div>
         <div class="container p-5 my-5 border">
             <div class="row">

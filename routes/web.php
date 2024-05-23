@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -23,6 +24,7 @@ Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::Resource('categoria', CategoriaController::class);
 Route::Resource('producto', ProductoController::class);
+Route::Resource('pedido', PedidoController::class);
 
 Route::get('/login', function () {
     return Inertia::render('Welcome', [
