@@ -46,7 +46,7 @@
                         <label for="src" class="form-label">Portada</label>
                         <input type="text" class="form-control" id="src" name="src" value="" required>
                       </div>
-                      <button type="submit" class="btn btn-primary">Guardar Libro</button>
+                      <button type="submit" class="btn btn-dark text-white mb-4">Guardar Libro</button>
                     </form>
                   </div>
                 </div>

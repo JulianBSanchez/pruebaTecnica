@@ -27,11 +27,11 @@
                 <form method="POST" action="{{ route('producto.destroy', $producto->id) }}">
                   @csrf
                   @method('DELETE')
-                  <button type="submit" class="btn btn-primary">Borrar Libro</button>
+                  <button type="submit"class="btn btn-dark text-white mb-4">Borrar Libro</button>
                 </form> 
               </div>
               <div class="col-sm-6">
-                <a href="{{ route('producto.generarPDF', $producto->id) }}" class="btn btn-primary">Exportar a PDF</a>
+                <a href="{{ route('producto.generarPDF', $producto->id) }}" class="btn btn-dark text-white mb-4">Exportar a PDF</a>
               </div>
         </div>
       </div>

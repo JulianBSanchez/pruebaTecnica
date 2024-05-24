@@ -38,7 +38,7 @@
                         <label for="codigo" class="form-label">Código</label>
                         <input type="text" class="form-control" id="codigo" name="codigo" value="" required>
                       </div>
-                      <button type="submit" class="btn btn-primary">Guardar Categoria</button>
+                      <button type="submit"class="btn btn-dark text-white mb-4">Guardar Categoria</button>
                     </form>
                   </div>
                 </div>

@@ -23,8 +23,8 @@ app.component('full-calendar', {
         themeSystem: 'bootstrap',
         initialView: 'dayGridMonth',
         events: [
-          { title: 'Event 1', date: '2024-05-01' },
-          { title: 'Event 2', date: '2024-05-02' },
+          { title: 'Pedido 1', date: '2024-05-01' },
+          { title: 'Pedido 2', date: '2024-05-02' },
           // Add more events here
         ],
       });
