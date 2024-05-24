@@ -17,9 +17,6 @@ return new class extends Migration
             $table->unsignedBigInteger('categoria_id');
             $table-> foreign('categoria_id')->references('id')->on('categorias');
 
-            $table->unsignedBigInteger('pedido_id')->nullable();
-            $table-> foreign('pedido_id')->references('id')->on('pedidos');
-
             $table-> string('codigo');
             $table-> string('nombre');
             $table-> bigInteger('precio');
