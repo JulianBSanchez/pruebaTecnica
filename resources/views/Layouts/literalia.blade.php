@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-sm-1">   
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-5">
                     @yield('secondary_content')
                 </div>
             </div> 
