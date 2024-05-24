@@ -27,4 +27,5 @@
     <h3 class="text-center" >Calendario de pedidos</h3>
     <full-calendar></full-calendar>
     <a href="" class="btn btn-dark text-white mb-4">Ver todos los pedidos</a>
+    <my-calendar-event/>
 @endsection

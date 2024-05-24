@@ -39,4 +39,7 @@ app.component('my-table-categories', MyTableCategogories);
 import MyTableProducts from './Components/MyTableProducts.vue';
 app.component ('my-table-productos', MyTableProducts);
 
+import CalendarEvent from './Components/CalendarEvent.vue';
+app.component('my-calendar-event', CalendarEvent);
+
 app.mount('#app');
