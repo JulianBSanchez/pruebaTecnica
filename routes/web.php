@@ -20,6 +20,8 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/producto/{id}/generarPDF', [ProductoController::class, 'generarPDF'])->name('producto.generarPDF');
+
 Route::Resource('categoria', CategoriaController::class);
 Route::Resource('producto', ProductoController::class);
 Route::Resource('pedido', PedidoController::class);

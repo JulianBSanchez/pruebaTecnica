@@ -4,9 +4,18 @@
 
 <h3 class="text-center" >Libros</h3>
     <my-table-productos></my-table-productos>
-    <a href="{{ route('producto.create') }}" class="btn btn-primary">Agregar nuevo Libro</a>
-   
-   
+    <div class="row">
+        <div class="col-sm-6 ">
+            <div class="text-center">
+                <a href="{{ route('producto.create') }}" class="btn btn-primary">Agregar nuevo Libro</a>
+            </div> 
+        </div>
+        <div class="col-sm-6">
+            <div class="text-center">
+                <a href="" class="btn btn-primary">Exportar libros a XLS</a>
+            </div>
+        </div>
+    </div>   
 @endsection
 
 @section('secondary_content')

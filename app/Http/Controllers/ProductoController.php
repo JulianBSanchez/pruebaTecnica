@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Producto;
 use App\Models\Categoria;
+use App\Models\Pedido;
+use Barryvdh\DomPDF\PDF;
 
 class ProductoController extends Controller
 {
@@ -76,5 +78,15 @@ class ProductoController extends Controller
     {
         Producto::find($id)->delete();
         return redirect()->route('home');
+    }
+
+    public function generarPDF($id)
+    {
+        $pdf = app('dompdf.wrapper');
+        $producto = Producto::find($id);
+        // Generar el PDF
+        $pdf->loadView('Producto.showProduct', compact('producto'));
+        // Devolver el PDF para su descarga
+       return $pdf->download('producto.pdf');
     }
 }

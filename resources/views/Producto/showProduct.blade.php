@@ -31,7 +31,7 @@
                 </form> 
               </div>
               <div class="col-sm-6">
-                <button type="submit" class="btn btn-primary">Expotar a PDF</button>
+                <a href="{{ route('producto.generarPDF', $producto->id) }}" class="btn btn-primary">Exportar a PDF</a>
               </div>
         </div>
       </div>
