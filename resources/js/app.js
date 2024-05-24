@@ -4,18 +4,14 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-import './bootstrap';
-import "bootstrap/dist/css/bootstrap.min.css";
 import { createApp } from 'vue';
 
 // Import FullCalendar
 import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import bootstrapPlugin from '@fullcalendar/bootstrap';
+
 // Register the components
-
-
-
 const app = createApp({});
 
 app.component('full-calendar', {
@@ -27,8 +23,8 @@ app.component('full-calendar', {
         themeSystem: 'bootstrap',
         initialView: 'dayGridMonth',
         events: [
-          { title: 'Event 1', date: '2024-05-01' },
-          { title: 'Event 2', date: '2024-05-02' },
+          { title: 'Pedido 1', date: '2024-05-01' },
+          { title: 'Pedido 2', date: '2024-05-02' },
           // Add more events here
         ],
       });

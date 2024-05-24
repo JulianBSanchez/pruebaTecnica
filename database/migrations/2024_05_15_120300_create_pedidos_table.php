@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             
             $table->date('fecha');
-            $table->integer('unidades');
-            $table->bigInteger('coste');
+            $table->integer('unidades')->nullable();
+            $table->bigInteger('coste')->nullable();
             $table->string('recordatorio');
 
             $table->timestamps();

@@ -18,14 +18,16 @@ class PedidoController extends Controller
         return $pedidos;
     }
 
+<<<<<<< HEAD
         
+=======
+>>>>>>> views-and-vue
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {   
-        $pedidos = Pedido::all();
-        return view('Pedido.createOrder', compact('pedidos'));
+        return view('Pedido.createOrder');
     }
 
     /**

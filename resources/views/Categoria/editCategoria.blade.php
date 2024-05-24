@@ -30,7 +30,7 @@
                 <label for="codigo" class="form-label">Código</label>
                 <input type="text" class="form-control" id="codigo" name="codigo" value="{{ $categoria->codigo }}" required>
               </div>
-              <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+              <button type="submit"class="btn btn-dark text-white mb-4"">Guardar Cambios</button>
             </form>
           </div>
         </div>
