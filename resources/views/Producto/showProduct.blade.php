@@ -22,12 +22,17 @@
               <li class="list-group-item"><strong>Precio:</strong> {{ $producto->precio }}</li>
               <li class="list-group-item"><strong>portada:</strong>{{ $producto->src}}.</li>
             </ul>
-            <form method="POST" action="{{ route('producto.destroy', $producto->id) }}">
-              @csrf
-              @method('DELETE')
-              <button type="submit" class="btn btn-primary">Borrar Libro</button>
-            </form>
-          </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <form method="POST" action="{{ route('producto.destroy', $producto->id) }}">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-primary">Borrar Libro</button>
+                </form> 
+              </div>
+              <div class="col-sm-6">
+                <button type="submit" class="btn btn-primary">Expotar a PDF</button>
+              </div>
         </div>
       </div>
     </div>
