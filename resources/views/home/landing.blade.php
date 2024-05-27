@@ -1,4 +1,5 @@
 @extends('Layouts.literalia')
+@auth
 
 @section('main_content')
 
@@ -38,3 +39,5 @@
         </div>
     </div>
 @endsection
+    
+@endauth

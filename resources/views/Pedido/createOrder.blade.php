@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+    @auth
     <div id="app">
         <div class="container">
             <h1>Crear Pedido</h1>
@@ -28,5 +29,6 @@
             </form>
         </div>
     </div>
+    @endauth
 </body>
 </html>
