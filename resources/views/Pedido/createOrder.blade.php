@@ -20,12 +20,11 @@
                     <label for="recordatorio">Nombre del Pedido</label>
                     <input type="text" class="form-control" id="recordatorio" name="recordatorio">
                 </div>
-    
                 <div class="form-group">
                     <label for="fecha">Fecha</label>
                     <input type="date" class="form-control" id="fecha" name="fecha" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Crear Pedido</button>
+                <button type="submit" class="btn btn-dark text-white mb-4">Añadir libros</button>
             </form>
         </div>
     </div>

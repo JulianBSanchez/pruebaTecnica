@@ -22,13 +22,22 @@ use Maatwebsite\Excel\Facades\Excel;
 
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/', [HomeController::class, 'index'])->name('index');
+
+Route::Resource('pedido', PedidoController::class);
+Route::get('/showall',     [PedidoController::class, 'showAll'])->name('pedido.show-all');
+Route::post('/pedidoadd/{pedidoId}/{productoId}', [PedidoController::class, 'addProductoPedido'])->name('pedido.add');
+Route::post('/pedidoremove/{pedidoId}/{productoId}', [PedidoController::class, 'removeProductoPedido'])->name('pedido.remove');
+
+
+
+Route::Resource('producto', ProductoController::class);
 Route::get('/producto/{id}/generarPDF', [ProductoController::class, 'generarPDF'])->name('producto.generarPDF');
 Route::get('/productos/exportar-excel', [ProductoController::class, 'exportarExcel'])->name('productos.exportar-excel');
 
 
 Route::Resource('categoria', CategoriaController::class);
-Route::Resource('producto', ProductoController::class);
-Route::Resource('pedido', PedidoController::class);
+
+
 
 
 Route::get('/dashboard', function () {

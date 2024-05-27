@@ -14,25 +14,6 @@ import bootstrapPlugin from '@fullcalendar/bootstrap';
 // Register the components
 const app = createApp({});
 
-app.component('full-calendar', {
-    template: `<div ref="calendar"></div>`,
-    mounted() {
-      const calendarEl = this.$refs.calendar;
-      const calendar = new Calendar(calendarEl, {
-        plugins: [dayGridPlugin, bootstrapPlugin],
-        themeSystem: 'bootstrap',
-        initialView: 'dayGridMonth',
-        events: [
-          { title: 'Pedido 1', date: '2024-05-01' },
-          { title: 'Pedido 2', date: '2024-05-02' },
-          // Add more events here
-        ],
-      });
-      calendar.render();
-    },
-  });
-
-
 import MyTableCategogories from './Components/MyTableCategories.vue';
 app.component('my-table-categories', MyTableCategogories);
 
