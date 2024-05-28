@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editar Producto</title>
+  <title>Creación Género Literario</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +14,7 @@
             <div class="col-md-8">
               <div class="card">
                 <div class="card-header">
-                  <h3>Crear nueva Categoria</h3>
+                  <h3>Crear nuevo género literario</h3>
                 </div>
                 <div class="card-body">
                   <form method="POST" action="{{ route('categoria.store') }}">

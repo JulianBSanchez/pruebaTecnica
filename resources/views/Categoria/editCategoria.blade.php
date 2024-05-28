@@ -13,7 +13,7 @@
       <div class="col-md-8">
         <div class="card">
           <div class="card-header">
-            <h3>Editanto la Categoria: {{ $categoria->nombre }}</h3>
+            <h3>Editanto el género liteario: {{ $categoria->nombre }}</h3>
           </div>
           <div class="card-body">
             <form method="POST" action="{{ route('categoria.update', $categoria->id) }}">
